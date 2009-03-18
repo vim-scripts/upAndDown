@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2586
+
+Swapping a line with the line directly above or below it is a common task when writing computer software.
+This script provides some mappings for normal, insert and visual modes which make this more easily accomplished.
+Using it allows you to move a line (or multiple lines) of text up or down within a document using the <S> and <Up>/<Down> arrow keys.
+This is similar to the <Alt> and <Up>/<Down> arrow text movement feature in Eclipse.
+Thanks to tips http://vim.wikia.com/wiki/VimTip191.
