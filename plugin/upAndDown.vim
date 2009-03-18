@@ -3,7 +3,7 @@
 " Author:      Frédéric Hardy (fhardy at noparking.net)
 " Last Change: Wed Mar 18 11:38:45 CET 2009
 " Licence:     GPL version 2.0 license
-" GetLatestVimScripts: XXXX xxxxx :AutoInstall: upAndDown.vim
+" GetLatestVimScripts: 2586 10240 :AutoInstall: upAndDown.vim
 "=============================================================================
 if !exists('upAndDown_enable')
 	let s:keepCpo= &cpo
