@@ -1,7 +1,7 @@
 "=============================================================================
 " File:        upAndDown.vim
-" Author:      Frédéric Hardy (fhardy at noparking.net)
-" Last Change: Wed Mar 18 11:38:45 CET 2009
+" Author:      Frédéric Hardy (frederic.hardy@mageekbox.net)
+" Last Change: Mer 10 jui 2015 13:20:30 CEST
 " Licence:     GPL version 2.0 license
 " GetLatestVimScripts: 2586 10240 :AutoInstall: upAndDown.vim
 "=============================================================================
@@ -60,7 +60,6 @@ if !exists('upAndDown_enable')
 	endfunction
 
 	function s:moveVisualUp()
-		echomsg 'UP'
 		call s:moveUpWithArgs("'<", "'<,'>")
 		normal gv
 	endfunction
@@ -79,9 +78,15 @@ if !exists('upAndDown_enable')
 	endfunction
 
 	function s:move(arg)
+		let l:localFoldMethod = &foldmethod
 		let column = virtcol('.')
+
+		setlocal foldmethod=manual
+
 		execute 'silent! ' . a:arg
 		execute 'normal! ' . column . '|'
+
+		let &l:foldmethod = l:localFoldMethod
 	endfunction
 
 	let &cpo= s:keepCpo
